@@ -6,6 +6,7 @@ import (
 
 	"github.com/rakyll/statik/fs"
 
+	// Statik makes assets available via a blank import
 	_ "github.com/buzzfeed/sso/internal/auth/statik"
 )
 
