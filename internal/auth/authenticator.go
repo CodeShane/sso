@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 	"time"
 
@@ -186,7 +185,6 @@ func (p *Authenticator) newMux() http.Handler {
 	fsHandler, err := loadFSHandler()
 	if err != nil {
 		logger.Fatal(err)
-		os.Exit(1)
 	}
 	serviceMux.Handle("/static/", http.StripPrefix("/static/", fsHandler))
 
